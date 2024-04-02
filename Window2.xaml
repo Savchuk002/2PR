@@ -1,0 +1,27 @@
+﻿<Window x:Class="PR2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BrownHalfCircle" Height="450" Width="800">
+    <Grid>
+        <!-- Задний фон с белым цветом -->
+        <Grid.Background>
+            <SolidColorBrush Color="LightBlue"/>
+        </Grid.Background>
+
+        <!-- Коричневый полукруг в центре -->
+        <Canvas x:Name="canvas" Width="200" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.104,0.126" Margin="308,175,0,0">
+            <Path Stroke="Black" StrokeThickness="3" Fill="Brown">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="195,50">
+                            <ArcSegment Point="0,50" Size="100,100" SweepDirection="Clockwise" IsLargeArc="False"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Line X1="100" Y1="50" X2="100" Y2="-50" Stroke="Black" StrokeThickness="10"/>
+            <Polygon x:Name="sail" Points="100,-40 150,-10 100,50" Fill="White" Stroke="Black" StrokeThickness="2"/>
+        </Canvas>
+        <Rectangle Fill="Blue" Width="880" HorizontalAlignment="Center" Margin="0,254,0,-16"/>
+    </Grid>
+</Window>
